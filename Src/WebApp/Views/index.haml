@@ -1,0 +1,14 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %h1 Welcome to Tell
+
+  %form{:method => "post", :action => "person/create/"}
+    %div
+      %span
+        Email Address
+      %span
+        %input{:name => "email", :type => "text"}
+
+
+    %div#actions
+      %input{:type => "submit", :value => "Create Account"}
