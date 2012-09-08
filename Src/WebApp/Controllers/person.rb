@@ -15,3 +15,13 @@ post '/person/create/' do
   status 200
   return "Created Person"
 end
+
+post '/person/tell/' do
+  tellTo = params[:tellTo]
+  tellMessage = params[:tellMessage]
+
+  Api::Person::Tell(tellTo, tellMessage)
+
+  status 200
+  return "Successful Tell"
+end

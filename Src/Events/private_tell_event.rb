@@ -1,7 +1,7 @@
 require_relative 'event'
 
 module Events
-  class SimpleTellEvent < Event
+  class PrivateTellEvent < Event
     def initialize(personId, message)
       @personId = personId
       @message = message

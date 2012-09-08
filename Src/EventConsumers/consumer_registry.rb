@@ -8,7 +8,6 @@ module EventConsumers
         @@consumersForEvent[event].push(consumer)
       else
         @@consumersForEvent[event] = [consumer]
-        p "htr"
       end
 
     end

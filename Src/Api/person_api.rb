@@ -19,6 +19,12 @@ module Api
       return true
     end
 
+    def self.Tell(tellTo, tellMessage)
+      DomainEvent.Raise(TellEvent.new(tellTo, tellMessage))
+
+      return true
+    end
+
     private
     def self.validateCreatePerson(personId)
       personExists = Db.Query()["Person"].find_one("PersonId" => personId) != nil

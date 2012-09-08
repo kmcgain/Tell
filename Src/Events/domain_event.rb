@@ -6,7 +6,7 @@ class DomainEvent
   end
 
   def self.Raise(event)
-    id = UUID.timestamp_create.to_i
+    id = UUIDTools::UUID.timestamp_create.to_i
 
     consumeableEvent = ConsumeableEvent.new(id, event)
 

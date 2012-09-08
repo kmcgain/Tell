@@ -1,0 +1,12 @@
+%form{:method => "post", :action => "person/tell/"}
+  %div
+    %div
+      %span Tell
+      %span
+        %input{:name => "tellTo", :type => "text"}
+    %div
+      %span that
+      %span
+        %input{:name => "tellMessage", :type => "text"}
+    %div.actions
+      %input{:type => "submit", :value => "Tell"}
